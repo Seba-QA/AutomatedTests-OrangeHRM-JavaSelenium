@@ -12,7 +12,7 @@ import io.cucumber.core.options.Constants;
 @Suite
 @IncludeEngines("cucumber")
 @SelectClasspathResource("features")
-@ConfigurationParameter(key = Constants.FILTER_TAGS_PROPERTY_NAME, value = "@credencialesValidas")
+@ConfigurationParameter(key = Constants.FILTER_TAGS_PROPERTY_NAME, value = "@credencialesInvalidas")
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "stepsTest")
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty, html:target/cucumber-reports.html")
 public class CucumberTest {

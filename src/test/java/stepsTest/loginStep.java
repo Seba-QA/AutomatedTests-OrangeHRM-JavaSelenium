@@ -32,20 +32,10 @@ public class loginStep{
         lg.valDashboard();
     }
 
-    //Paso a paso de casos donde no se debe poder iniciar sesion
-    @Given("Ingreso {string} y {string} incorrecto")
-    public void ingresoUserYPassFalla(String user, String pass, String caso) {
-        //aun nada
-    }
-
-    @When("Se presiona boton login falla inicio de sesio")
-    public void sePresionaBotonFalla(String arg0) {
-        //aun nada
-    }
-
+    //Validacion casos donde no se debe poder iniciar sesion
     @Then("Se validan mensajes de error {string}")
-    public void seValidanMensajesDeError() {
-        //aun nada
+    public void seValidanMensajesDeError(String caso) {
+        lg.validaCaso(caso);
     }
 
 }
