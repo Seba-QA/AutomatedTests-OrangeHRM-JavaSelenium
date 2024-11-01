@@ -136,7 +136,8 @@
                 <executions>
                     <execution>
                         <id>generate-report</id>
-                        <phase>post-integration-test</phase>
+                        <phase>prepare-package</phase>
+                        <!-- <phase>post-integration-test</phase> -->
                         <goals>
                             <goal>generate</goal>
                         </goals>

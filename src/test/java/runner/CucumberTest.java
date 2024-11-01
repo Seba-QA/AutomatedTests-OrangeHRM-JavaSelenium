@@ -14,6 +14,6 @@ import io.cucumber.core.options.Constants;
 @SelectClasspathResource("features")
 @ConfigurationParameter(key = Constants.FILTER_TAGS_PROPERTY_NAME, value = "@credencialesInvalidas")
 @ConfigurationParameter(key = GLUE_PROPERTY_NAME, value = "stepsTest")
-@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty, html:target/cucumber-reports.html")
+@ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty, json:target/cucumber-reports/cucumber.json")
 public class CucumberTest {
 }
