@@ -17,10 +17,5 @@ pipeline {
                 sh 'mvn test' // Ejecutar pruebas
             }
         }
-        stage('Report') {
-            steps {
-                junit '**/target/surefire-reports/*.xml' // Ajusta la ruta según tu configuración
-            }
-        }
     }
 }
