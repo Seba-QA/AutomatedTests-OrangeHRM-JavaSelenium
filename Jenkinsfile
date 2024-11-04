@@ -29,10 +29,10 @@ pipeline {
                 sh 'mvn test'
             }
         }
-        stage('Generate Report') {
+        stage('Generate Cucumber Report') {
             steps {
-                // Genera reportes usando el plugin de Cucumber
-                sh 'mvn verify -DgenerateReports=true'
+                // Verifica y genera reportes usando el plugin de Cucumber si es necesario
+                sh 'mvn verify -Dcucumber.options="--plugin json:target/cucumber-reports/cucumber.json"'
             }
         }
     }
