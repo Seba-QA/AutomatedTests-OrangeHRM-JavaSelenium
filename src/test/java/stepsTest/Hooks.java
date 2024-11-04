@@ -42,9 +42,9 @@ public class Hooks {
             driver = new ChromeDriver(options);
         }else if (browser.equals("edge")){
             EdgeOptions options = new EdgeOptions();
-            options.addArguments("--disable-gpu");
+            //options.addArguments("--disable-gpu");
             options.addArguments("--disable-software-rasterizer");
-            options.addArguments("--disable-site-isolation-trials", "--no-sandbox", "--incognito");
+            options.addArguments("--disable-site-isolation-trials", "--incognito"); //se comenta "--no-sandbox" para probar error de jenkins
             options.addArguments("--start-maximized");
             WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver(options);
