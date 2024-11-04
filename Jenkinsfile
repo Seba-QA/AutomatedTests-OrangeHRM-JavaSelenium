@@ -18,7 +18,7 @@ pipeline {
                 script {
                     def mvnHome = tool name: 'Maven', type: 'maven'
                     withEnv(["PATH+MAVEN=${mvnHome}/bin"]) {
-                        sh 'mvn clean install'
+                        bat 'mvn clean install'
                     }
                 }
             }
@@ -26,13 +26,13 @@ pipeline {
         stage('Run Tests') {
             steps {
                 // Ejecuta pruebas y genera reportes
-                sh 'mvn test'
+                bat 'mvn test'
             }
         }
         stage('Generate Cucumber Report') {
             steps {
                 // Verifica y genera reportes usando el plugin de Cucumber si es necesario
-                sh 'mvn verify -Dcucumber.options="--plugin json:target/cucumber-reports/cucumber.json"'
+                bat 'mvn verify -Dcucumber.options="--plugin json:target/cucumber-reports/cucumber.json"'
             }
         }
     }
